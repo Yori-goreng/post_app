@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
   def index
+    @posts =  Post.order(:id :asc)
   end
 
   def show
+    @post = Post.find(pramas[:id])
   end
 
   def new
